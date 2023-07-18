@@ -57,7 +57,7 @@ func captchaStart(c *gin.Context) {
 
 func captchaVerify(c *gin.Context) {
 	type submissionRequest struct {
-		Index   int                `json:"index"`
+		Index   []int                `json:"index"`
 		Session funcaptcha.Session `json:"session"`
 	}
 	var request submissionRequest
